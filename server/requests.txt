@@ -1,0 +1,12 @@
+$Body = @{
+    type = "BUG"
+    comment = "Something got wrong"
+}
+ 
+$Parameters = @{
+    Method = "POST"
+    Uri =  "http://localhost:3333/feedbacks"
+    Body = ($Body | ConvertTo-Json) 
+    ContentType = "application/json"
+}
+Invoke-RestMethod @Parameters
