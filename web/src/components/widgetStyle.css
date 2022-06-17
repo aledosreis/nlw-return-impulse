@@ -1,0 +1,349 @@
+:root {
+  --widget-brand-color-300: #996DFF;
+  --widget-brand-color-500: #8257e6;
+  --neutral-400: #a3a3a3;
+  --zinc-100: #f4f4f5;
+  --zinc-400: #a1a1aa;
+  --zinc-700: #3f3f46;
+  --zinc-600: #52525b;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+}
+
+.popover {
+  position: fixed;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.popover-button {
+  background-color: var(--widget-brand-color-500);
+  border-radius: 9999px;
+  padding-inline: 1.2rem;
+  height: 4.8rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.widget-button-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.span-text {
+  max-width: 0;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+
+.popover-button:hover .span-text {
+  max-width: 32rem;
+}
+
+.span-pad {
+  padding-left: 0.8rem;
+}
+
+.loading {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loading-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.close-button {
+  top: 2rem;
+  right: 2rem;
+  position: absolute;
+  color: var(--zinc-400);
+  background-color: transparent;
+  border: none;
+}
+
+.back-button:hover,
+.close-button:hover {
+  color: var(--zinc-100);
+}
+
+.close-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.back-button {
+  top: 2rem;
+  left: 2rem;
+  position: absolute;
+  color: var(--zinc-400);
+  background-color: transparent;
+  border: none;
+}
+
+.back-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.widget-form {
+  background-color: var(--zinc-900);
+  padding: 1.6rem;
+  position: relative;
+  border-radius: 1.6rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 3.2rem);
+}
+
+.widget-form header span.title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--zinc-100);
+  display: flex;
+  gap: 0.8rem;
+}
+
+.widget-form header span.title img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.widget-form .feedback-types {
+  display: flex;
+  padding-block: 3.2rem;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.widget-form .feedback-types button {
+  background-color: var(--zinc-800);
+  border-radius: 0.8rem;
+  padding-block: 2rem;
+  width: 9.6rem;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  border-width: 0.2rem;
+  border-color: transparent;
+}
+
+.widget-form .feedback-types button:hover {
+  border-color: var(--widget-brand-color-500);
+}
+
+.widget-form .feedback-types button:focus {
+  border-color: var(--widget-brand-color-500);
+  outline: 0.2rem solid transparent;
+  outline-offset: 0.2rem;
+}
+
+.widget-form .feedback-types button span {
+  color: var(--zinc-100);
+}
+
+.form {
+  margin-block: 1.6rem;
+  width: 100%;
+}
+
+.form textarea {
+  min-width: 30.4rem;
+  width: 100%;
+  min-height: 11.2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--zinc-100);
+  border-color: var(--zinc-600);
+  background-color: transparent;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.2rem;
+  margin-top: 1.6rem;
+  resize: none;
+  /* --scrollbar-thumb: #3f3f46 !important; */
+  /* scrollbar-color: var(--scrollbar-thumb) transparent; */
+  overflow: overlay;
+}
+
+.form textarea::placeholder {
+  color: var(--zinc-400);
+}
+
+.form textarea:focus {
+  border-color: var(--widget-brand-color-500);
+  outline: 0.2rem solid transparent;
+  outline-offset: 0.2rem;
+}
+
+.form footer {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  background-color: transparent;
+  padding-block: 0;
+}
+
+.form footer button.take-screenshot {
+  padding: 0.8rem;
+  background-color: var(--zinc-800);
+  border-radius: 0.4rem;
+  border-color: transparent;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  border: 0;
+}
+
+.form footer button.take-screenshot:hover {
+  background-color: var(--zinc-700);
+}
+
+.form footer button.take-screenshot:focus {
+  outline: 0.2rem solid transparent;
+  outline-offset: 0.2rem;
+}
+
+.form footer button.take-screenshot .camera-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: white;
+}
+
+.form footer button.screenshot-taken {
+  padding: 0.4rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  border: transparent;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  color: var(--zinc-400);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.form footer button.screenshot-taken:hover {
+  color: var(--zinc-100);
+}
+
+.form footer button.submit-button {
+  padding: 0.8rem;
+  background-color: var(--widget-brand-color-500);
+  border-radius: 0.4rem;
+  border: transparent;
+  flex: 1 1 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  color: inherit;
+}
+
+.form footer button.submit-button:hover {
+  background-color: var(--widget-brand-color-300);
+}
+
+.form footer button.submit-button:disabled {
+  opacity: 0.5;
+}
+
+.form footer button.submit-button:disabled:hover {
+  background-color: var(--widget-brand-color-500);
+}
+
+.form footer button.submit-button:focus {
+  outline: 0.2rem solid transparent;
+  outline-offset: 0.2rem;
+}
+
+.widget-form .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 4rem;
+  width: 30.4rem;
+}
+
+.widget-form .content span.title {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-top: 0.8rem;
+  color: var(--zinc-100);
+}
+
+.widget-form .content button {
+  padding-block: 0.8rem;
+  padding-inline: 2.4rem;
+  margin-top: 2.4rem;
+  background-color: var(--zinc-800);
+  color: var(--zinc-100);
+  border-radius: 0.4rem;
+  border-color: transparent;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.widget-form .content button:hover {
+  background-color: var(--zinc-700);
+}
+
+.widget-form .content button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+footer.widget-footer {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: var(--neutral-400);
+  background-color: transparent;
+  padding-block: 0;
+}
+
+footer.widget-footer a {
+  text-decoration-line: underline;
+  text-underline-offset: 0.2rem;
+  color: var(--neutral-400);
+}
+
+@media (min-width: 768px) {
+  .popover {
+    bottom: 1.2rem;
+    right: 8rem;
+  }
+
+  .widget-form {
+    width: auto;
+  }
+}
