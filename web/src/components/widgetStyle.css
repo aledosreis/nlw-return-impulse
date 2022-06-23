@@ -182,9 +182,20 @@
   padding: 0.8rem 1.2rem;
   margin-top: 1.6rem;
   resize: none;
-  /* --scrollbar-thumb: #3f3f46 !important; */
-  /* scrollbar-color: var(--scrollbar-thumb) transparent; */
   overflow: overlay;
+}
+
+.form textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.form textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.form textarea::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+  border-radius: 0.2rem;
 }
 
 .form textarea::placeholder {
